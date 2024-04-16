@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background-color: rgb(32, 31, 31);
+    color: rgb(236, 233, 233);
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.noStyle{
+    list-style: none;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*** MENU ***/
+.Menu{
+    height: 99px;
+    width: 100%;
+    border-width: 0px 1px 1px 0px;
+    background-color: rgb(14, 13, 13);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu ul{
+  margin: auto;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+}
+.Menu ul li{
+    list-style: none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(195, 161, 98);
+    cursor: pointer;
+}
+.Menu ul li:hover{
+    background: rgb(138, 114, 69);
+}
+/*** Menu Desktop ***/
+
+/*** Content ***/
+.Content{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    overflow: scroll;
+    display: grid;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*** Footer ***/
+.Footer{
+    height: 50px;
+    background-color: rgb(14, 13, 13);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
 }

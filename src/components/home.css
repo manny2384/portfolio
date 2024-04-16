@@ -1,0 +1,22 @@
+/*** Project Template ***/
+.projectTemplate{
+    height: 300px;
+    width: 270px;
+    background-color: rgb(138, 140, 142);
+    margin: 50px auto;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+.projectTemplate:hover{
+    background-color: rgb(88, 89, 90);
+    font-size: 20px;
+}
+
+/*** Intro ***/
+.Intro{
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+}

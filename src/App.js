@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import Projects from './components/Projects';
 
 function App() {
+
+  const [show, setShow] = useState(<Home />);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="Menu"> 
+        <ul>
+          <li onClick={()=>{setShow(<Home />)}}> HOME </li>
+          <li onClick={()=>{setShow(<Projects />)}}> PROJECTS </li>
+          <li onClick={()=>{setShow(<Resume />)}}> RESUME <a className="fa"> &#xf019; </a> </li>
+        </ul>
+      </div>
+
+      <div className="Content"> {show} <div style={{height: '100px'}}></div> </div>
+
+      <div className="Footer"> 
+        <div> linkedIn </div>
+        <div> github </div>
+        
+      </div>
     </div>
   );
 }
