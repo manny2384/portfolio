@@ -1,21 +1,25 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from "./components/Home";
 import Resume from "./components/Resume";
 import Projects from './components/Projects';
 
 function App() {
 
-  const [show, setShow] = useState(<Home />);
+  const [show, setShow] = useState(<div />);
+  useEffect(()=>{
+    setShow(<Home setShow={setShow} />);
+  }, []);
+  
 
   return (
     <div className="App">
 
       <div className="Menu"> 
         <ul>
-          <li onClick={()=>{setShow(<Home />)}}> HOME </li>
+          <li onClick={()=>{setShow(<Home setShow={setShow} />)}}> HOME </li>
           <li onClick={()=>{setShow(<Projects />)}}> PROJECTS </li>
-          <li onClick={()=>{setShow(<Resume />)}}> RESUME <a className="fa"> &#xf019; </a> </li>
+          <li> <a href="./components/EmmanuelGonzalezResume.pdf" download="EmmanuelGonzalezResume.pdf" className="fa">Resume &#xf019; </a> </li>
         </ul>
       </div>
 

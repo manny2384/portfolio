@@ -5,8 +5,10 @@
 
 .App{
     width: 100vw;
+    min-width: 350px;
     height: 100vh;
     overflow: scroll;
+    overflow-x: scroll;
     background-color: rgb(32, 31, 31);
     color: rgb(236, 233, 233);
     font-family: "Lucida Console", "Courier New", monospace;
@@ -24,15 +26,18 @@
 .Menu{
     height: 99px;
     width: 100%;
+    min-width: 350px;
+    overflow-x: scroll;
     border-width: 0px 1px 1px 0px;
     background-color: rgb(14, 13, 13);
     position: fixed;
     top: 0;
-    overflow: hidden;
+
 }
 .Menu ul{
   margin: auto;
   width: 100%;
+  max-width: 400px;
   height: 100%;
   display: flex;
   flex-flow: row;

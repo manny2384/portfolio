@@ -1,3 +1,27 @@
+.Home{
+    max-width: 850px;
+}
+.BorderTitle{
+    color: black;
+    background-color: aliceblue;
+    padding: 0 5px;
+    margin: 30px 0 10px;
+}
+.listDesc{
+    min-width: 300px;
+    max-width: 850px;
+
+}
+.ulStyle{
+    width: 300px;
+    padding-left: 20px;
+
+}
+.ulStyle li::marker{
+    content: '- ';
+    color: rgb(195, 161, 98);
+}
+
 /*** Project Template ***/
 .projectTemplate{
     height: 300px;

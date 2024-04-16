@@ -1,6 +1,10 @@
 import './home.css';
+import Projects from './Projects';
 
-function Home() {
+
+function Home(props) {
+    console.log(props);
+
     return(
         <div className="Home">
             <div className="Intro"> 
@@ -16,59 +20,59 @@ function Home() {
                 classifier using octave. 
             </div>
 
-            <div className="projectTemplate">
+            <div className="projectTemplate" onClick={()=>{props.setShow(<Projects />)}}>
                 <div> PROJECTS </div>
             </div>
 
             <div className="Education">
-                <h2> EDUCATION & Certifications</h2>
-                <ul>
-                    <li> CompTIA A+ </li>
-                    <li> 
+                <h2 className='BorderTitle'> EDUCATION & Certifications</h2>
+                <div>
+                    
+                    <div> 
                         <h3> CSU East Bay </h3>
-                        <h4> Bachelor's of Science, Computer Science </h4>
-                        <div>
-                                <ul> Relevant Courses 
-                                    <li> Web Development </li>
-                                    <li> Database Architecture </li>
-                                    <li> Data Structures & Algorithsm </li>
-                                </ul>
-                            </div>
-                    </li>
-                    <li>
+                        <h5> Bachelor's of Science, Computer Science </h5>
+                        
+                        <ul className='ulStyle'>
+                            <li> Web Development </li>
+                            <li> Database Architecture </li>
+                            <li> Data Structures & Algorithsm </li>
+                        </ul>
+                        
+                    </div>
+                    <div style={{'marginTop':'20px'}}>
                         <h3> Ygnacio Valley HS </h3>
                         <h4> Diploma </h4>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
 
             <div className="WorkExperience">
-                <h2> WORK EXPERIENCE </h2>
+                <h2 className='BorderTitle'> WORK EXPERIENCE </h2>
 
                 <div className="Job">
-                    <div className="jobHeader"> 
-                        <div>
-                            <h3> Propark Mobility </h3>
-                            <h4> Supervisor I </h4>
-                        </div>
+                    
+                    <div>
+                        <h3> Propark Mobility </h3>
+                        <h5> Supervisor I </h5>
                     </div>
+                    
 
-                    <ul className="duties flexCol">
+                    <ul className="ulStyle">
                         <li> Cooperate with upper management and associates to execute day to day tasks </li>
                         <li> Deliver excellent customer service in a fast paced environment </li>
-                        <li> Answer cx inquiries and set them up to use request system </li>
+                        <li> Answer client inquiries and set them up to use request system </li>
                     </ul>
                 </div>
 
                 <div className="Job">
-                    <div className="jobHeader">
-                        <div>
+                   
+                    <div style={{'marginTop':'20px'}}>
                             <h3> Geek Squad </h3>
                             <h4> Repair Agent </h4>
-                        </div>
                     </div>
+              
 
-                    <ul className="duties flexCol">
+                    <ul className="ulStyle">
                         <li> Troubleshoot/Install PC Hardware and Software
                              such as motherboards, cpu, ram and hard drives
                         </li>
@@ -80,8 +84,8 @@ function Home() {
             </div>
 
             <div className="Skills">
-                <h2> SKILLS </h2>
-                <ul>
+                <h2 className='BorderTitle'> SKILLS </h2>
+                <ul className='ulStyle'>
                     <li> Customer Service </li>
                     <li> C++ Programming </li>
                     <li> HTML & CSS </li>
